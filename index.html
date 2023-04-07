@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pokédex</title>
+</head>
+<body>
+    <div class="art"></div>
+    <div class="art2"></div>
+    <div class="container">
+        <div class="header">
+            <div class="top">
+                <div class="name" id="update_name">Pokédex</div>
+            </div>
+            <div class="input-group search">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search the Pokédex..">
+                <div class="input-group-append">
+                  <button onclick="getPokemon()" class="btn btn-dark" type="button" id="btn">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+            </div>
+            <div id="error" class="hidden">
+                Sorry, that Pokémon is not available in Scarlet & Violet
+            </div>
+        </div>
+        <div class="info">
+            <div class="sprite">
+                <img id="sprite" alt=" missing pokemon" src="./missingno.png">
+            </div>
+            <div class="bigbox">
+                <div class="box">
+                    <div class="classification">
+                        <p id="update_species">Species not found.</p>
+                    </div>
+                    <div class="desc type">
+                        <div class="item selector"><h4>Type</h4></div>
+                        <div class="item"><p id="update_type"></p></div>
+                    </div>
+                    <div class="desc height">
+                        <div class="item selector"><h4>Height</h4></div>
+                        <div class="item"><p id="update_height"></p></div>
+                    </div>
+                    <div class="desc weight">
+                        <div class="item selector"><h4>Weight</h4></div>
+                        <div class="item"><p id="update_weight"></p></div>
+                    </div>
+                </div>
+                <div class="entry">
+                    <p id="update_entry">Pokédex entry not found.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
